@@ -1,13 +1,13 @@
 ## Homework #3
  
-### 1. Вывести всех работников чьи зарплаты есть в базе, вместе с зарплатами
+### 1. Вывести всех работников, чьи зарплаты есть в базе, вместе с зарплатами
 ```
 select employee_name, monthly_salary 
 from employees e
 inner join employee_salary es on e.id = es.employee_id 
 inner join salary s on es.salary_id = s.id;
 ```
-### 2. Вывести всех работников у которых ЗП меньше 2000
+### 2. Вывести всех работников, у которых ЗП меньше 2000
 ```
 select employee_name 
 from employees e
@@ -25,7 +25,7 @@ group by monthly_salary
 having count(employee_name) = 0
 order by monthly_salary;
 ```
-### 4. Вывести все зарплатные позиции  меньше 2000 но работник по ним не назначен (ЗП есть, но не понятно кто её получает)
+### 4. Вывести все зарплатные позиции меньше 2000, но работник по ним не назначен (ЗП есть, но не понятно кто её получает)
 ```
 select monthly_salary  
 from salary s
@@ -36,7 +36,7 @@ group by monthly_salary
 having count(employee_name) = 0
 order by monthly_salary;
 ```
-### 5. Найти всех работников кому не начислена ЗП
+### 5. Найти всех работников, кому не начислена ЗП
 ```
 select employee_name
 from employees e
@@ -257,7 +257,7 @@ inner join roles_employee re on es.employee_id = re.employee_id
 inner join roles r on re.role_id = r.id
 order by monthly_salary, employee_name;
 ```
-### 30. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300
+### 30. Вывести имена, должности и ЗП всех специалистов по возрастанию, у которых ЗП от 1700 до 2300
 ```
 select employee_name, role_name, monthly_salary
 from employees e 
@@ -268,7 +268,7 @@ inner join roles r on re.role_id = r.id
 where monthly_salary between 1700 and 2300
 order by monthly_salary, employee_name;
 ```
-### 31. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП меньше 2300
+### 31. Вывести имена, должности и ЗП всех специалистов по возрастанию, у которых ЗП меньше 2300
 ```
 select employee_name, role_name, monthly_salary
 from employees e 
@@ -279,7 +279,7 @@ inner join roles r on re.role_id = r.id
 where monthly_salary < 2300
 order by monthly_salary, employee_name;
 ```
-### 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000
+### 32. Вывести имена, должности и ЗП всех специалистов по возрастанию, у которых ЗП равна 1100, 1500, 2000
 ```
 select employee_name, role_name, monthly_salary
 from employees e 
