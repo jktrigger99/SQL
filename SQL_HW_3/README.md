@@ -59,6 +59,9 @@ inner join roles_employee re on e.id = re.employee_id
 inner join roles r on re.role_id = r.id
 where role_name like '%Java developer';
 ```
+
+Можно поменять `like` на `ilike`, чтобы сделать запрос регистронезависимым.
+
 ### 8. Вывести имена и должность только Python разработчиков
 ```
 select employee_name, role_name
@@ -176,7 +179,7 @@ from salary s
 inner join employee_salary es on es.salary_id = s.id 
 inner join roles_employee re on es.employee_id = re.employee_id
 inner join roles r on re.role_id = r.id
-where role_name like 'Junior%QA engineer';
+where role_name = 'Junior QA engineer';
 ```
 ### 21. Вывести среднюю зарплату всех Junior специалистов
 ```
