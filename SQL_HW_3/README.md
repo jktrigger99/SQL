@@ -176,7 +176,7 @@ from salary s
 inner join employee_salary es on es.salary_id = s.id 
 inner join roles_employee re on es.employee_id = re.employee_id
 inner join roles r on re.role_id = r.id
-where role_name like 'Junior%QA engineer';
+where role_name = 'Junior QA engineer';
 ```
 ### 21. Вывести среднюю зарплату всех Junior специалистов
 ```
