@@ -118,8 +118,8 @@ values ('Junior Python developer'), ('Middle Python developer'), ('Senior Python
 ```
 create table roles_employee(
 	id serial primary key,
-	employee_id int not null unique,
-	role_id int not null);
+	employee_id int not null unique references employees (id),
+	role_id int not null references roles (id));
 ```
 
 ### 11. Наполнить таблицу roles_employee 40 строками:
