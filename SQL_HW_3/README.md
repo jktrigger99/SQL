@@ -59,6 +59,9 @@ inner join roles_employee re on e.id = re.employee_id
 inner join roles r on re.role_id = r.id
 where role_name like '%Java developer';
 ```
+
+Можно поменять `like` на `ilike`, чтобы сделать запрос регистронезависимым.
+
 ### 8. Вывести имена и должность только Python разработчиков
 ```
 select employee_name, role_name
